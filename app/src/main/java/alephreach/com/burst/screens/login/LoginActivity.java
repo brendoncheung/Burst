@@ -4,8 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import alephreach.com.burst.R;
+import alephreach.com.burst.screens.common.BaseActivity;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends BaseActivity {
 
     private LoginActivityController mController;
     private LoginActvitiyViewMvc mViewMvc;

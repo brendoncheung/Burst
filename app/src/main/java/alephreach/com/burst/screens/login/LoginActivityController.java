@@ -16,7 +16,6 @@ public class LoginActivityController implements
 
     public LoginActivityController() {
         mFetchUserLoginUseCase = new FetchUserLoginUseCase();
-        mNavigator = new ActivityScreenNavigator(mViewMvc.getRootView().getContext());
     }
 
     public void bindView(LoginActvitiyViewMvc loginActvitiyViewMvc) {
@@ -24,6 +23,7 @@ public class LoginActivityController implements
     }
 
     public void onStart(){
+        mNavigator = new ActivityScreenNavigator(mViewMvc.getRootView().getContext());
         mViewMvc.registerListener(this);
         mFetchUserLoginUseCase.registerListener(this);
     }
@@ -44,8 +44,8 @@ public class LoginActivityController implements
     @Override
     public void onSuccessUserLogin() {
         // transition to next activity
-        mNavigator.toToDoListActivity();
         Log.d("login", "success");
+        mNavigator.toToDoListActivity();
     }
 
     @Override

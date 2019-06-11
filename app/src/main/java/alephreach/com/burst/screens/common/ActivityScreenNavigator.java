@@ -1,9 +1,9 @@
 package alephreach.com.burst.screens.common;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.widget.ToggleButton;
+
+import alephreach.com.burst.screens.todolist.TodoListActivity;
 
 public class ActivityScreenNavigator {
 
@@ -14,7 +14,8 @@ public class ActivityScreenNavigator {
     }
 
     public void toToDoListActivity() {
-        Intent intent = new Intent(mContext, ToggleButton.class);
+        Intent intent = new Intent(mContext, TodoListActivity.class);
+        mContext.startActivity(intent);
     }
 
 
